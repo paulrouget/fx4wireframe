@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+<title>Firefox - Windows 7</title>
+
+<style>
+    /* ******* */
+    /* Options */
+    /* ******* */
+
+    /* Size: */
+    #desktop {
+        width: 1024px;
+        height: 720px;
+    }
+    #window {
+        width: 981px;
+        height: 670px;
+    }
+    /* Background: */
+    #desktop { background-image: url(bg.jpg); }
+    #windowBackground {
+        background: -moz-linear-gradient(top, rgba(50,50,200,0.3) 33%, rgba(200,100,200,0.3)), url(bg.jpg) ;
+    }
+</style>
+
+<div id="desktop">
+    <div id="window">
+        <div id="windowBackground"></div>
+        <div id="windowControls"></div>
+        <div id="chrome">
+            <div id="tabs">
+                <p class="tab" style="background-image: url(http://twitter.com/favicon.ico)">Twitter / Home</p>
+                <p class="tab focus" style="background-image: url(http://www.mozilla.com/favicon.ico)">Mozilla / Firefox</p>
+                <p class="tab" style="background-image: url(http://www.google.com/favicon.ico)">Google</p>
+            </div>
+            <div id="navigationToolbar">
+                <img src="historyButtons.png">
+                <input style="background-image: url(http://mozilla.com/favicon.ico)" id="urlbar" value="http://mozilla.com"></input>
+                <span id="urlbuttons">
+                    <img src="staranddropbuttons.png">
+                    <img style="border-left: 1px solid #9E9E9E" src="reloadbutton.png">
+                </span>
+                <input style="background-image: url(http://www.google.com/favicon.ico)" id="searchbar" placeholder="Google"></input>
+            </div>
+            <iframe id="browser" src="http://mozilla.com"></iframe>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* ****** */
+    /* Static */
+    /* ****** */
+
+    * { margin: 0; padding: 0; }
+    body { background-color: #272828; }
+    #desktop {
+        border: 3px solid white;
+        margin: auto;
+        margin-top: 20px;
+        box-shadow: 0 0 30px black;
+    }
+
+    #windowBackground {
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+    }
+
+    #windowControls {
+        background: url(orange.png), url(closeButtons.png);
+        background-position: top left, top right;
+        background-repeat: no-repeat;
+        top: -1px; left: 0;
+        width: 100%; height: 100%;
+    }
+
+    #window {
+        border-radius: 6px;
+        box-shadow: 0 0 30px black;
+        margin: auto;
+        margin-top: 15px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    #window > div {
+        position: absolute;
+    }
+
+    #chrome {
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        padding: 23px 5px 5px 5px;
+    }
+    #tabs {
+        margin-left: 10px;
+    }
+    .tab {
+        height: 20px; width: 220px;
+        font-family: monospace;
+        padding-left: 24px;
+        background-position: 4px 4px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border-radius: 4px 4px 0 0;
+        padding-top: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 0px;
+        color: #333;
+        opacity: 0.8;
+        background-color: #ABB6BC;
+    }
+    .tab:hover {
+        opacity: 1;
+    }
+    .tab.focus {
+        opacity: 1;
+        background-color: #F2F6F9;
+    }
+    #navigationToolbar * {
+        vertical-align: middle;
+    }
+    #navigationToolbar {
+        padding: 4px 4px 4px 4px;
+        background: -moz-linear-gradient(top, #F2F6F9 33%, #D6E5EC);
+        border-radius: 2px 2px 0 0;
+        width: -moz-calc(100% - 20px);
+    }
+    #navigationToolbar input {
+        margin-left: 7px!important;
+        background-repeat: no-repeat;
+        background-position: 4px 3px;
+        margin: 0px;
+        padding-left: 24px;
+        padding-bottom: 2px;
+        border: 1px solid #9E9E9E;
+        height: 22px;
+        border-radius: 3px;
+        box-shadow:inset 0 0 1px #555;
+    }
+    #urlbuttons {
+        margin-left: -70px;
+        margin-top: 0px;
+        display: inline-block;
+    }
+    #urlbar {
+        width: 60%;
+    }
+    #searchbar {
+        width: 26%;
+    }
+    #browser {
+        width: -moz-calc(100% - 12px);
+        height: -moz-calc(100% - 93px);
+        border: none;
+        overflow: auto;
+    }
+
+</style>
